@@ -4,23 +4,46 @@ using System.Collections;
 using System.Collections.Generic;
 public class DialogueManager : MonoBehaviour
 {
+    [SerializeField] public GameObject choicesPanel;
+    [SerializeField] public TMP_Text currentChoice1;
+    [SerializeField] public TMP_Text currentChoice2;
     [SerializeField] public TMP_Text currentDialogue;
+    [SerializeField] public TMP_Text currentSpeaker ;
     private string nextDialogue = "nextdialogue";
-    [SerializeField] public TMP_Text Speaker ;
-
+    private string nextSpeaker = "nextspeaker";
+    private string nextChoice1 = "nextChoice1";
+    private string nextChoice2 = "nextChoice2";
+    private float x = 0f;
     private void Start() {
-        Dictionary<string, string> dialogue = new Dictionary<string, string>();
-        dialogue.Add("testSpeaker", "testDialogue");
+        ChoicesActivation(true);
     }
-
     public void Update() {
-        if (Input.GetButtonDown("Jump")) ChangeDialogue();
-        //change to getbutton and add an interval using time.deltatime
+        x += Time.deltaTime;
+        if (Input.GetButton("Jump")) {
+            if (x > 0.2) {
+                ChangeDialogue();
+                ChangeSpeaker();
+                ChangeChoices();
+                x = 0;
+            }
+        }
     }
-
     public void ChangeDialogue() {
         currentDialogue.text = nextDialogue;
         nextDialogue = "next" + nextDialogue;   
     }
+    public void ChangeSpeaker() {
+        currentSpeaker.text = nextSpeaker;
+        nextSpeaker = "next" + nextSpeaker;   
+    }
+    public void ChangeChoices() {
+       currentChoice1.text = nextChoice1;
+       nextChoice1 = "next" + nextChoice1;
+       currentChoice2.text = nextChoice2;
+       nextChoice2 = "next" + nextChoice2;
 
+    }
+    public void ChoicesActivation(bool x) {
+        choicesPanel.SetActive(x);
+    }   
 }

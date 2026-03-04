@@ -1,0 +1,8 @@
+enter,start,speaker,dialogue,choice,flag,next,start,speaker,dialogue,next,exit
+testA,TRUE,?,1 +  [] = ?,1 + 1 =  2,answered,TRUE,TRUE,?,1 + 1 IS 2,TRUE,testA1
+,FALSE,,,why are you asking?,questioned,TRUE,TRUE,?,…,TRUE,testA2
+,FALSE,,,,,FALSE,FALSE,,,,
+enter,start,speaker,dialogue,chioce,flag,next,start,,,,
+testA1,,?,"ok, what is 2 + 2",4,answeredCorrectly,,,,,,
+,,,,5,answeredWrong,,,,,,
+,,,,why are you asking these questions?,questioned,,,,,,

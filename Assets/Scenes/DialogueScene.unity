@@ -388,7 +388,7 @@ GameObject:
   - component: {fileID: 357341772}
   - component: {fileID: 357341771}
   m_Layer: 5
-  m_Name: MIddlePanel
+  m_Name: MiddlePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1882,8 +1882,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f60265baa29efacfbb8f96540ad6a5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  choicesPanel: {fileID: 1446442196}
+  currentChoice1: {fileID: 201005782}
+  currentChoice2: {fileID: 734988356}
   currentDialogue: {fileID: 1715396811}
-  Speaker: {fileID: 1557054020}
+  currentSpeaker: {fileID: 1557054020}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
