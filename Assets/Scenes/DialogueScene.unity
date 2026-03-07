@@ -1802,6 +1802,7 @@ GameObject:
   - component: {fileID: 2053918447}
   - component: {fileID: 2053918446}
   - component: {fileID: 2053918449}
+  - component: {fileID: 2053918450}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1887,6 +1888,18 @@ MonoBehaviour:
   currentChoice2: {fileID: 734988356}
   currentDialogue: {fileID: 1715396811}
   currentSpeaker: {fileID: 1557054020}
+--- !u!114 &2053918450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053918445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5b8c7d260d2a2f65ac1e425c20b8ca3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

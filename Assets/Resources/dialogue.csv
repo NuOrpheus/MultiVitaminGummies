@@ -1,0 +1,4 @@
+enter,start,speaker,dialogue,choice,flag,exit
+testA,TRUE,?,1 +  [] = ?,1 + 1 =  2,answered,testA1
+,FALSE,,,why are you asking?,questioned,testA2
+,FALSE,,,,,
