@@ -15,7 +15,10 @@ public class DialogueManager : MonoBehaviour
     private string nextChoice2 = "nextChoice2";
     private float x = 0f;
     private void Start() {
-        ChoicesActivation(true);
+        ChoicesActivation(false);
+        //currentSpeaker.text = gameObject.GetComponent<CsvParser>().storage["Speaker/Dialogue"].key;
+        //currentDialogue.text = storage["Speaker/Dialogue"].Value;
+
     }
     public void Update() {
         x += Time.deltaTime;
