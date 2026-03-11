@@ -1888,6 +1888,7 @@ MonoBehaviour:
   currentChoice2: {fileID: 734988356}
   currentDialogue: {fileID: 1715396811}
   currentSpeaker: {fileID: 1557054020}
+  csvParser: {fileID: 0}
 --- !u!114 &2053918450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1900,6 +1901,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b8c7d260d2a2f65ac1e425c20b8ca3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InputDialogue: inputDialogue
+  InputSpeaker: inputSpeaker
+  InputChoice1: inputChoice1
+  InputChoice2: inputChoice2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

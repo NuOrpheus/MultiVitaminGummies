@@ -1,4 +1,2 @@
-enter,start,speaker,dialogue,choice,flag,exit
-testA,TRUE,?,1 +  [] = ?,1 + 1 =  2,answered,testA1
-,FALSE,,,why are you asking?,questioned,testA2
-,FALSE,,,,,
+enter,speaker,dialogue,choice1,choice2,exit1,exit2
+start1,???,1 +  [] = ?,1 + 1 =  2,why are you asking?,testA1,testA2

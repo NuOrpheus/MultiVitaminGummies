@@ -9,16 +9,13 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] public TMP_Text currentChoice2;
     [SerializeField] public TMP_Text currentDialogue;
     [SerializeField] public TMP_Text currentSpeaker ;
-    private string nextDialogue = "nextdialogue";
-    private string nextSpeaker = "nextspeaker";
-    private string nextChoice1 = "nextChoice1";
-    private string nextChoice2 = "nextChoice2";
     private float x = 0f;
+    public CsvParser csvParser;
     private void Start() {
+        csvParser = GetComponent<CsvParser>();
         ChoicesActivation(false);
         //currentSpeaker.text = gameObject.GetComponent<CsvParser>().storage["Speaker/Dialogue"].key;
         //currentDialogue.text = storage["Speaker/Dialogue"].Value;
-
     }
     public void Update() {
         x += Time.deltaTime;
@@ -32,19 +29,15 @@ public class DialogueManager : MonoBehaviour
         }
     }
     public void ChangeDialogue() {
-        currentDialogue.text = nextDialogue;
-        nextDialogue = "next" + nextDialogue;   
+        currentDialogue.text = csvParser.InputDialogue;
+        //call changer  
     }
     public void ChangeSpeaker() {
-        currentSpeaker.text = nextSpeaker;
-        nextSpeaker = "next" + nextSpeaker;   
+        currentSpeaker.text = csvParser.InputSpeaker;  
     }
     public void ChangeChoices() {
-       currentChoice1.text = nextChoice1;
-       nextChoice1 = "next" + nextChoice1;
-       currentChoice2.text = nextChoice2;
-       nextChoice2 = "next" + nextChoice2;
-
+       currentChoice1.text = csvParser.InputChoice1;
+       currentChoice2.text = csvParser.InputChoice2;
     }
     public void ChoicesActivation(bool x) {
         choicesPanel.SetActive(x);
