@@ -46,10 +46,10 @@ public class CsvParser : MonoBehaviour {
             for (int row = 0; row < /*lists.Count*/7; row++) {
                 try {
                     Debug.Log(lists[col][row]);
-                    if (row === 0) {
+                    if (row == 0) {
                         AddOuterSection(lists[col][row]);
                         tmp = lists[col][row];
-                    if (row === 1) AddOuterSection(tmp, "speaker", lists[col][row]);
+                    } else if (row == 1) AddOuterSection(tmp, "speaker", lists[col][row]);
                     //print(row);
                 } catch {}
             }
