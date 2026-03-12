@@ -10,6 +10,7 @@ public class CsvParser : MonoBehaviour {
     public string InputExit1 = "start1";
     public string InputExit2 = "start1";
     public Dictionary<string, Dictionary<string, string>> storage = new Dictionary<string, Dictionary<string, string>>();
+    //Debug.Log(InputExits[0]);
     private void AddOuterSection(string section) {
         storage.Add(section, new Dictionary<string, string>());
     }
@@ -23,6 +24,8 @@ public class CsvParser : MonoBehaviour {
         InputChoice2 = storage[section]["choice2"];
         InputExit1 = storage[section]["exit1"];
         InputExit2 = storage[section]["exit2"];
+        
+        //return(string[storage[section]["exit1"],storage[section]["exit2"]]);
     }
     void Start()
     {
@@ -36,14 +39,14 @@ public class CsvParser : MonoBehaviour {
             lists.Add(list);
         }
         /////////// end copied code
-        AddOuterSection("start1");
+        /*AddOuterSection("start1");
         AddInnerSection("start1","speaker","???");
         AddInnerSection("start1","dialogue","first dialogue");
         AddInnerSection("start1","choice1","first choice");
         AddInnerSection("start1","choice2","second choice");
         AddInnerSection("start1","exit1","start1A");
         AddInnerSection("start1","exit2","start1B");
-        /*foreach(var z in storage) {
+        foreach(var z in storage) {
             Debug.Log(z.Key);
             //Debug.Log(z.Value);
             foreach(var y in z.Value) {
@@ -52,7 +55,7 @@ public class CsvParser : MonoBehaviour {
             }
         }*/
         //Debug.Log(storage["start1"]["speaker"]);
-        for (int col = 1; col < 2; col++) {
+        for (int col = 1; col < lists.Count-1; col++) {
             for (int row = 0; row < /*lists.Count*/7; row++) {
                 try {
                     if (row == 0) {
@@ -64,7 +67,6 @@ public class CsvParser : MonoBehaviour {
                     else if (row == 4) AddInnerSection(tmp, "choice2", lists[col][row]);
                     else if (row == 5) AddInnerSection(tmp, "exit1", lists[col][row]);
                     else if (row == 6) AddInnerSection(tmp, "exit2", lists[col][row]);
-                    //print(row);
                 } catch {}
             }
         }

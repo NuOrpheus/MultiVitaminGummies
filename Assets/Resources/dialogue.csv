@@ -1,2 +1,4 @@
 enter,speaker,dialogue,choice1,choice2,exit1,exit2
-start1,???,1 +  [] = ?,1 + 1 =  2,why are you asking?,testA1,testA2
+start1,???,1 +  [] = ?,1 + 1 =  2,why are you asking?,testA1,end
+testA1,???,3 x 3 =,9,why are you asking?,end,
+end,,end,,,,
