@@ -21,23 +21,18 @@ public class DialogueManager : MonoBehaviour
         x += Time.deltaTime;
         if (Input.GetButton("Jump")) {
             if (x > 0.2) {
-                ChangeDialogue();
-                ChangeSpeaker();
-                ChangeChoices();
+                ChangeText("start1");
                 x = 0;
             }
         }
     }
-    public void ChangeDialogue() {
+    public void ChangeText(section) {
         currentDialogue.text = csvParser.InputDialogue;
-        //call changer  
-    }
-    public void ChangeSpeaker() {
         currentSpeaker.text = csvParser.InputSpeaker;  
-    }
-    public void ChangeChoices() {
-       currentChoice1.text = csvParser.InputChoice1;
-       currentChoice2.text = csvParser.InputChoice2;
+        currentChoice1.text = csvParser.InputChoice1;
+        currentChoice2.text = csvParser.InputChoice2;
+        csvParser.nextSection(section);
+
     }
     public void ChoicesActivation(bool x) {
         choicesPanel.SetActive(x);

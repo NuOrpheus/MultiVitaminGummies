@@ -7,12 +7,22 @@ public class CsvParser : MonoBehaviour {
     public string InputSpeaker = "inputSpeaker";
     public string InputChoice1 = "inputChoice1";
     public string InputChoice2 = "inputChoice2";
+    public string InputExit1 = "start1";
+    public string InputExit2 = "start1";
     public Dictionary<string, Dictionary<string, string>> storage = new Dictionary<string, Dictionary<string, string>>();
     private void AddOuterSection(string section) {
         storage.Add(section, new Dictionary<string, string>());
     }
     private void AddInnerSection(string section, string value1, string value2) {
         storage[section].Add(value1, value2);
+    }
+    public void nextSection(string section) {
+        InputSpeaker = storage[section]["speaker"];
+        InputDialogue = storage[section]["dialogue"];
+        InputChoice1 = storage[section]["choice1"];
+        InputChoice2 = storage[section]["choice2"];
+        InputExit1 = storage[section]["exit1"];
+        InputExit2 = storage[section]["exit2"];
     }
     void Start()
     {
@@ -45,11 +55,15 @@ public class CsvParser : MonoBehaviour {
         for (int col = 1; col < 2; col++) {
             for (int row = 0; row < /*lists.Count*/7; row++) {
                 try {
-                    Debug.Log(lists[col][row]);
                     if (row == 0) {
                         AddOuterSection(lists[col][row]);
                         tmp = lists[col][row];
-                    } else if (row == 1) AddOuterSection(tmp, "speaker", lists[col][row]);
+                    } else if (row == 1) AddInnerSection(tmp, "speaker", lists[col][row]);
+                    else if (row == 2) AddInnerSection(tmp, "dialogue", lists[col][row]);
+                    else if (row == 3) AddInnerSection(tmp, "choice1", lists[col][row]);
+                    else if (row == 4) AddInnerSection(tmp, "choice2", lists[col][row]);
+                    else if (row == 5) AddInnerSection(tmp, "exit1", lists[col][row]);
+                    else if (row == 6) AddInnerSection(tmp, "exit2", lists[col][row]);
                     //print(row);
                 } catch {}
             }
