@@ -1,12 +1,5 @@
 {
   "dependencies": {
-    "com.joshclose.csvhelper": {
-      "version": "https://github.com/bilal-arikan/CsvHelper-For-Unity.git?path=/src/CsvHelper",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "bf312d493712889933ad7394671a009d58a7ca39"
-    },
     "com.unity.2d.animation": {
       "version": "10.1.4",
       "depth": 1,
@@ -109,13 +102,6 @@
       },
       "url": "https://packages.unity.com"
     },
-    "com.unity.collab-proxy": {
-      "version": "2.11.3",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.com"
-    },
     "com.unity.collections": {
       "version": "2.5.1",
       "depth": 2,
@@ -168,7 +154,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.inputsystem": {
-      "version": "1.14.0",
+      "version": "1.14.2",
       "depth": 0,
       "source": "registry",
       "dependencies": {
