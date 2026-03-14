@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 public class CsvParser : MonoBehaviour {
@@ -32,9 +33,12 @@ public class CsvParser : MonoBehaviour {
     }
     void Awake()
     {
+        if (!File.Exists(Directory.GetCurrentDirectory() + "/Assets/Resources/Plushie.png")) {
+            Application.Quit();
+            UnityEditor.EditorApplication.isPlaying = false;
+        }
         //https://discussions.unity.com/t/how-to-read-a-dataset-from-a-csv/783544/6 
         // start copied code 
-        // (the following code is almost completely untouched by me)
         TextAsset dataset = Resources.Load<TextAsset>("dialogue");
         string[] lines = dataset.text.Split("\n");
         List<List<string>> lists = new List<List<string>>();
