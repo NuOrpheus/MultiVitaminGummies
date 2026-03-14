@@ -33,7 +33,8 @@ public class CsvParser : MonoBehaviour {
     void Awake()
     {
         //https://discussions.unity.com/t/how-to-read-a-dataset-from-a-csv/783544/6 
-        // start copied code
+        // start copied code 
+        // (the following code is almost completely untouched by me)
         TextAsset dataset = Resources.Load<TextAsset>("dialogue");
         string[] lines = dataset.text.Split("\n");
         List<List<string>> lists = new List<List<string>>();
@@ -48,9 +49,9 @@ public class CsvParser : MonoBehaviour {
                 try {
                     switch (row) {
                         case 0:
-                            AddOuterSection(lists[col][row]);
                             tmp = lists[col][row];
-                            Debug.Log(tmp);
+                            AddOuterSection(tmp);
+                            
                             break;
                         case 1: 
                             AddInnerSection(tmp, "speaker", lists[col][row]);
