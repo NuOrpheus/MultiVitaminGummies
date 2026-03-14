@@ -45,30 +45,33 @@ public class CsvParser : MonoBehaviour {
         // end copied code
         for (int col = 1; col < lists.Count-1; col++) {
             for (int row = 0; row < 7; row++) {
-                switch (row) {
-                    case 0:
-                        AddOuterSection(lists[col][row]);
-                        tmp = lists[col][row];
-                        break;
-                    case 1: 
-                        AddInnerSection(tmp, "speaker", lists[col][row]);
-                        break;
-                    case 2: 
-                        AddInnerSection(tmp, "dialogue", lists[col][row]);
-                        break;
-                    case 3: 
-                        AddInnerSection(tmp, "choice1", lists[col][row]);
-                        break;
-                    case 4: 
-                        AddInnerSection(tmp, "choice2", lists[col][row]);
-                        break;
-                    case 5: 
-                        AddInnerSection(tmp, "exit1", lists[col][row]);
-                        break;
-                    case 6:
-                        AddInnerSection(tmp, "exit2", lists[col][row]);
-                        break;
-                }   
+                try {
+                    switch (row) {
+                        case 0:
+                            AddOuterSection(lists[col][row]);
+                            tmp = lists[col][row];
+                            Debug.Log(tmp);
+                            break;
+                        case 1: 
+                            AddInnerSection(tmp, "speaker", lists[col][row]);
+                            break;
+                        case 2: 
+                            AddInnerSection(tmp, "dialogue", lists[col][row].Replace("//", ","));
+                            break;
+                        case 3: 
+                            AddInnerSection(tmp, "choice1", lists[col][row]);
+                            break;
+                        case 4: 
+                            AddInnerSection(tmp, "choice2", lists[col][row]);
+                            break;
+                        case 5: 
+                            AddInnerSection(tmp, "exit1", lists[col][row]);
+                            break;
+                        case 6:
+                            AddInnerSection(tmp, "exit2", lists[col][row]);
+                            break;
+                    }
+                } catch {}
             }
         }
         nextSection("start");

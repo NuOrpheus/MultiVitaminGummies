@@ -1,5 +1,15 @@
 enter,speaker,dialogue,choice1,choice2,exit1,exit2
-start,???,1 +  [] = ?,1 + 1 =  2,why are you asking?,testA1,end
-testA1,???,3 x 3 =,9,(2) why are you asking?,testA2,end
-testA2,???,continued dialogue,,,end,
-end,end,end,,,end,
+start,Narrator,Welcome to the tutorial of this unfished project ^w^,,,testA1,
+choicesA1,Narrator,What's 1 + 1 equal to?,2,3,choicesA2,badEndA1
+choicesA2,Narrator,Good Job!! <br>You answered correctly// and have thus retained tutorial privilages.,,,choicesA3,
+testA1,Narrator,You can progress by either clicking with left mouse button// or your space bar.,,,testA2,
+end,end,end: where the dialogue ends,,,end,
+testA2,Narrator,This is a incomplete visual novel frame made with unity. ,,,testA3,
+testA3,Narrator,This is the alpha release so it is very rough around the edges and missing important functionality.,,,testA4,
+testA4,Narrator,You can display text- <br>-across multiple paragraphs// as well as create branching dialogue paths.,,,testA5,
+testA5,Narrator,There is also a second type of section// in these you must select a choice to progress.,,,testA6,
+testA6,Narrator,Have a try in the next section.,,,choicesA1,
+badEndA1,Narrator,Ok so you answered wrong. <br>This is where the tutorial ends.<br>Unfortunately I didn't implement a way of restarting the game so you are going to have to reload the page.,,,end,
+choicesA3,Narrator,Here's another question: What happens when you press your space bar// or click the screen// without selecting a choice.,Nothing happens,Wrong Answer,choicesA4,badEndB1
+badEndB1,Narrator,Wrong Answer: You are sent to the end.,,,end,
+choicesA4,Narrator,Here is where the dialogue ends.,,,end,

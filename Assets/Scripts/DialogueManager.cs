@@ -24,7 +24,7 @@ public class DialogueManager : MonoBehaviour {
     }
     private void Update() {
         x += Time.deltaTime;
-        if (Input.GetButton("Jump") && (x > 0.2)) {
+        if ((Input.GetButton("Jump")||Input.GetMouseButtonDown(0)) && (x > 0.2)) {
             if (!choicesPanel.activeSelf) ChangeText(csvParser.InputExit1);   
             x = 0;
         }
