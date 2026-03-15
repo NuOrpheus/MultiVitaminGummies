@@ -1014,27 +1014,15 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 811515022}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 811515023}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: OnChangeSlider
-        m_Mode: 4
+        m_MethodName: OnValueSliderChange
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0
+          m_FloatArgument: 21
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -1214,7 +1202,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccb5c97964a7ecf75b7a5928aca57505, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  VolumeSlider: {fileID: 762645189}
   Mixer: {fileID: 24100000, guid: dcaa2226fd95aacba8341d0b4980b8b2, type: 2}
+  volume: 1
   musicSource: {fileID: 811515025}
   sfxSource: {fileID: 811515025}
   backgroundMusic: {fileID: 8300000, guid: c174f337eccd0634a8838aea57f01655, type: 3}
@@ -1243,9 +1233,9 @@ AudioSource:
   m_GameObject: {fileID: 811515022}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: dcaa2226fd95aacba8341d0b4980b8b2, type: 2}
+  m_audioClip: {fileID: 8300000, guid: c174f337eccd0634a8838aea57f01655, type: 3}
+  m_Resource: {fileID: 8300000, guid: c174f337eccd0634a8838aea57f01655, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2590,7 +2580,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 399.99997, y: -97.916664}
+  m_AnchoredPosition: {x: 399.99997, y: -97.91666}
   m_SizeDelta: {x: 639.99994, y: 115.83333}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1959198596

@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
-//completely copied from labs and https://github.com/llamacademy/audio-slider/blob/main/Assets/Scripts/AudioSlider.cs
+//almost completely copied from labs
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance { get; private set; }
+    [Header("Audio Volume")]
     [SerializeField] public Slider VolumeSlider;
     [SerializeField] private AudioMixer Mixer;
     [Header("Audio Sources")]
@@ -14,10 +15,14 @@ public class AudioManager : MonoBehaviour
     [Header("Audio Clips")]
     public AudioClip backgroundMusic;
     public AudioClip clickSFX;
-    // Add more clips as needed
-    public void OnChangeSlider() {
-        Mixer.SetFloat(mainSlider.value);
+
+    public void OnValueSliderChange() {
+        if (VolumeSlider.value == 0f) Mixer.SetFloat("volume", -80f);
+        // start copied code https://discussions.unity.com/t/how-to-calculate-db-correct/712114
+        else Mixer.SetFloat("volume", 20 * Mathf.Log10(VolumeSlider.value));
+        //end copied code
     }
+
     private void Awake()
     {
         if (Instance == null)
@@ -33,7 +38,6 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        Mixer.SetFloat("volume",10f);
         if (backgroundMusic != null && musicSource != null)
         {
             musicSource.clip = backgroundMusic;
