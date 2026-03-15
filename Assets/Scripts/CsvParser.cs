@@ -31,12 +31,8 @@ public class CsvParser : MonoBehaviour {
         try {InputExit2 = storage[section]["exit2"];}
         catch {InputExit2 = "";}
     }
-    void Awake()
-    {
-        if (!File.Exists(Directory.GetCurrentDirectory() + "/Assets/Resources/Plushie.png")) {
-            Application.Quit();
-            UnityEditor.EditorApplication.isPlaying = false;
-        }
+    void Awake() {
+        if (!Resources.Load<Texture>("Plushie")) Application.Quit();
         //https://discussions.unity.com/t/how-to-read-a-dataset-from-a-csv/783544/6 
         // start copied code 
         TextAsset dataset = Resources.Load<TextAsset>("dialogue");
@@ -61,7 +57,7 @@ public class CsvParser : MonoBehaviour {
                             AddInnerSection(tmp, "speaker", lists[col][row]);
                             break;
                         case 2: 
-                            AddInnerSection(tmp, "dialogue", lists[col][row].Replace("//", ","));
+                            AddInnerSection(tmp, "dialogue", lists[col][row].Replace("//", ",").Replace("||", "\""));
                             break;
                         case 3: 
                             AddInnerSection(tmp, "choice1", lists[col][row]);

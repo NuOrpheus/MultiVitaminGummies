@@ -1,7 +1,8 @@
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
-//almost completely copied from labs
+using UnityEngine.SceneManagement;
+// largely copied from labs
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance { get; private set; }
@@ -11,41 +12,41 @@ public class AudioManager : MonoBehaviour
     [Header("Audio Sources")]
     public AudioSource musicSource;
     public AudioSource sfxSource;
-
     [Header("Audio Clips")]
+    public AudioClip menuMusic;
     public AudioClip backgroundMusic;
     public AudioClip clickSFX;
-
     public void OnValueSliderChange() {
         if (VolumeSlider.value == 0f) Mixer.SetFloat("volume", -80f);
         // start copied code https://discussions.unity.com/t/how-to-calculate-db-correct/712114
         else Mixer.SetFloat("volume", 20 * Mathf.Log10(VolumeSlider.value));
         //end copied code
     }
-
     private void Awake()
     {
-        if (Instance == null)
-        {
+        if (Instance == null){
             Instance = this;
             DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
+        } else {
             Destroy(gameObject);
         }
     }
-
     private void Start()
-    {
-        if (backgroundMusic != null && musicSource != null)
-        {
-            musicSource.clip = backgroundMusic;
+    {   
+        if (backgroundMusic != null && musicSource != null){
+            try {
+                if (SceneManager.GetActiveScene().buildIndex == 0) {
+                    musicSource.clip = menuMusic;
+                } else {
+                    musicSource.clip = backgroundMusic;
+                }
+            } catch {
+                musicSource.clip = backgroundMusic;
+            }
             musicSource.loop = true;
             musicSource.Play();
         }
     }
-
     public void PlaySFX(AudioClip clip)
     {
         if (clip != null && sfxSource != null)
@@ -53,7 +54,6 @@ public class AudioManager : MonoBehaviour
             sfxSource.PlayOneShot(clip);
         }
     }
-
     public void PlayMusic(AudioClip clip)
     {
         if (clip != null && musicSource != null)

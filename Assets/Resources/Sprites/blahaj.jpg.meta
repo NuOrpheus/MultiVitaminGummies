@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0d63b9e92f5f3a77fa6f7c3b4d488464
+guid: fd7462de0facdbad99e386cd4732f0d8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 670631987797991847
-    second: Plushie_0
+      213: 7160355118066528563
+    second: blahaj_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 3
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Plushie_0
+      name: blahaj_0
       rect:
         serializedVersion: 2
-        x: 156
-        y: 57
-        width: 688
-        height: 885
+        x: 0
+        y: 0
+        width: 1400
+        height: 1400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7a1a6bf5d309e4900800000000000000
-      internalID: 670631987797991847
+      spriteID: 331710eea01be5360800000000000000
+      internalID: 7160355118066528563
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Plushie_0: 670631987797991847
+      blahaj_0: 7160355118066528563
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

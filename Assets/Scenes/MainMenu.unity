@@ -639,8 +639,8 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1
-    height: 1
+    width: 480
+    height: 320
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -729,7 +729,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -815,7 +815,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 399.99997, y: -435.41666}
+  m_AnchoredPosition: {x: 400, y: -435.375}
   m_SizeDelta: {x: 639.99994, y: 115.83333}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &680629813
@@ -960,7 +960,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 399.99997, y: -324.5833}
+  m_AnchoredPosition: {x: 400, y: -324.625}
   m_SizeDelta: {x: 639.99994, y: 105.83333}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &762645189
@@ -1010,7 +1010,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.6
+  m_Value: 0.7
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -1133,6 +1133,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 811515023}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayMusic
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 4fbcebf0cb2c8cedfadeeb9e55cf0080, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &774898998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1204,10 +1216,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   VolumeSlider: {fileID: 762645189}
   Mixer: {fileID: 24100000, guid: dcaa2226fd95aacba8341d0b4980b8b2, type: 2}
-  volume: 1
   musicSource: {fileID: 811515025}
   sfxSource: {fileID: 811515025}
-  backgroundMusic: {fileID: 8300000, guid: c174f337eccd0634a8838aea57f01655, type: 3}
+  menuMusic: {fileID: 8300000, guid: c174f337eccd0634a8838aea57f01655, type: 3}
+  backgroundMusic: {fileID: 8300000, guid: 4fbcebf0cb2c8cedfadeeb9e55cf0080, type: 3}
   clickSFX: {fileID: 8300000, guid: e7bc2e869a2a9c845b11a9dbb2a136e1, type: 3}
 --- !u!4 &811515024
 Transform:
@@ -1639,7 +1651,7 @@ MonoBehaviour:
     m_Right: 80
     m_Top: 40
     m_Bottom: 40
-  m_ChildAlignment: 0
+  m_ChildAlignment: 4
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
@@ -2135,7 +2147,7 @@ MonoBehaviour:
     m_Right: 80
     m_Top: 40
     m_Bottom: 40
-  m_ChildAlignment: 0
+  m_ChildAlignment: 4
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
@@ -2580,7 +2592,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 399.99997, y: -97.91666}
+  m_AnchoredPosition: {x: 400, y: -97.875}
   m_SizeDelta: {x: 639.99994, y: 115.83333}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1959198596

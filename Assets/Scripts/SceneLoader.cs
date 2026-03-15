@@ -4,17 +4,17 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
     private bool playing = true;
-    public static SceneLoader Instance;
+    //public static SceneLoader Instance;
     [SerializeField] private GameObject OptionsMenu;
     [SerializeField] private GameObject MainMenu;
-    private void Awake() {
+    /*private void Awake() {
         if (Instance == null) {
             Instance = this;
             DontDestroyOnLoad(gameObject);
         } else {
             Destroy(gameObject);
         }
-    }
+    }*/
     public void Update() {
         if (Input.GetButtonDown("Cancel")) {
             if (playing) OptionsMenuOn();
