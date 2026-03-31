@@ -24,6 +24,9 @@ public class AudioManager : MonoBehaviour
         else Mixer.SetFloat("volume", 20 * Mathf.Log10(VolumeSlider.value));
         //end copied code
     }
+    public void OnMute() {
+        VolumeSlider.value = 0f;
+    }
     private void Awake()
     {
         if (Instance == null){

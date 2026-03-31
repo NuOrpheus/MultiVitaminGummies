@@ -29,6 +29,10 @@ public class DialogueManager : MonoBehaviour {
         audioManager.PlayButtonSfx();
         if (!choicesPanel.activeSelf) ChangeText(csvParser.InputExit1);
     }
+    public void OnClickRestart() {
+        audioManager.PlayButtonSfx();
+        ChangeText("start");
+    }
     private void Update() {
         x += Time.deltaTime;
         if (Input.GetButton("Jump") && (x > 0.15)) {

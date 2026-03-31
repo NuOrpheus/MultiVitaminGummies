@@ -1221,7 +1221,7 @@ MonoBehaviour:
   voiceSource: {fileID: 811515025}
   menuMusic: {fileID: 8300000, guid: c174f337eccd0634a8838aea57f01655, type: 3}
   backgroundMusic: {fileID: 8300000, guid: 4fbcebf0cb2c8cedfadeeb9e55cf0080, type: 3}
-  clickSfx: {fileID: 8300000, guid: cbcf783d710309e9ebb0971d26254fd7, type: 3}
+  clickSfx: {fileID: 8300000, guid: 99391f6bafafb35c99de9109b45774ab, type: 3}
   wrongClickSfx: {fileID: 8300000, guid: e7bc2e869a2a9c845b11a9dbb2a136e1, type: 3}
 --- !u!4 &811515024
 Transform:
@@ -2644,6 +2644,18 @@ MonoBehaviour:
       - m_Target: {fileID: 811515023}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: PlayButtonSfx
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 811515023}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: OnMute
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
