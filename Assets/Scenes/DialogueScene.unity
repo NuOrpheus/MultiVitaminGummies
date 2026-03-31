@@ -1589,7 +1589,7 @@ MonoBehaviour:
   sfxSource: {fileID: 1367275991}
   menuMusic: {fileID: 8300000, guid: c174f337eccd0634a8838aea57f01655, type: 3}
   backgroundMusic: {fileID: 8300000, guid: 4fbcebf0cb2c8cedfadeeb9e55cf0080, type: 3}
-  clickSFX: {fileID: 8300000, guid: e7bc2e869a2a9c845b11a9dbb2a136e1, type: 3}
+  clickSFX: {fileID: 8300000, guid: cbcf783d710309e9ebb0971d26254fd7, type: 3}
 --- !u!4 &1367275993
 Transform:
   m_ObjectHideFlags: 0

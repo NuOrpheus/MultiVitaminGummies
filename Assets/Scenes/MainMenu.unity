@@ -876,11 +876,11 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 811515023}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: PlaySFX
-        m_Mode: 2
+        m_MethodName: PlayButtonSfx
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: e7bc2e869a2a9c845b11a9dbb2a136e1, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1123,11 +1123,11 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 811515023}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: PlaySFX
-        m_Mode: 2
+        m_MethodName: PlayButtonSfx
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: e7bc2e869a2a9c845b11a9dbb2a136e1, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1218,9 +1218,11 @@ MonoBehaviour:
   Mixer: {fileID: 24100000, guid: dcaa2226fd95aacba8341d0b4980b8b2, type: 2}
   musicSource: {fileID: 811515025}
   sfxSource: {fileID: 811515025}
+  voiceSource: {fileID: 811515025}
   menuMusic: {fileID: 8300000, guid: c174f337eccd0634a8838aea57f01655, type: 3}
   backgroundMusic: {fileID: 8300000, guid: 4fbcebf0cb2c8cedfadeeb9e55cf0080, type: 3}
-  clickSFX: {fileID: 8300000, guid: e7bc2e869a2a9c845b11a9dbb2a136e1, type: 3}
+  clickSfx: {fileID: 8300000, guid: cbcf783d710309e9ebb0971d26254fd7, type: 3}
+  wrongClickSfx: {fileID: 8300000, guid: e7bc2e869a2a9c845b11a9dbb2a136e1, type: 3}
 --- !u!4 &811515024
 Transform:
   m_ObjectHideFlags: 0
@@ -1255,7 +1257,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 175
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -2508,11 +2510,11 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 811515023}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: PlaySFX
-        m_Mode: 2
+        m_MethodName: PlayButtonSfx
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: e7bc2e869a2a9c845b11a9dbb2a136e1, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2641,11 +2643,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 811515023}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: PlaySFX
-        m_Mode: 2
+        m_MethodName: PlayButtonSfx
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: e7bc2e869a2a9c845b11a9dbb2a136e1, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2786,11 +2788,11 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 811515023}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: PlaySFX
-        m_Mode: 2
+        m_MethodName: PlayButtonSfx
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: e7bc2e869a2a9c845b11a9dbb2a136e1, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

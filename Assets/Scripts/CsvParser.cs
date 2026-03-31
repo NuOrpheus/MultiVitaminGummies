@@ -3,7 +3,7 @@ using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 public class CsvParser : MonoBehaviour {
-    public string tmp;
+    private string tmp;
     public string InputDialogue;
     public string InputSpeaker;
     public string InputChoice1;
