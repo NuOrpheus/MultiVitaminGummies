@@ -4,20 +4,20 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
     private bool playing = true;
-    //public static SceneLoader Instance;
     [SerializeField] private GameObject OptionsMenu;
     [SerializeField] private GameObject MainMenu;
-    /*private void Awake() {
-        if (Instance == null) {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        } else {
-            Destroy(gameObject);
-        }
-    }*/
     public void Update() {
         if (Input.GetButtonDown("Cancel")) {
-            if (playing) OptionsMenuOn();
+            print(playing);
+            if (playing) {
+                MainMenu.SetActive(false);
+                OptionsMenu.SetActive(true);
+                playing = false;
+            } else {   
+                OptionsMenu.SetActive(false);
+                MainMenu.SetActive(true);
+                playing = true;
+            }
         }
     }
     public void LoadScene (string sceneName) {
@@ -40,12 +40,5 @@ public class SceneLoader : MonoBehaviour
     public void MainMenuOn() {
         MainMenu.SetActive(true);
         OptionsMenu.SetActive(false);
-    }
-    public void BackClick() {
-        if (OptionsMenu.activeSelf) {
-            OptionsMenu.SetActive(false);
-        } else {
-            MainMenuOn();
-        }
     }
 }
