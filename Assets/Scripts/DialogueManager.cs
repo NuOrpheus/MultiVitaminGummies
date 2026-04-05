@@ -41,12 +41,15 @@ public class DialogueManager : MonoBehaviour {
     private void Update() {
         x += Time.deltaTime;
         if (Input.GetButton("Jump") && (x > 0.15)) {
-            if (!choicesPanel.activeSelf) OnClickChoice1();
+            if (!choicesPanel.activeSelf && !wait) OnClickChoice1();
             x = 0;
         }
     }
     public void ChangeText(string section, int choice) {
         csvParser.nextSection(section);
+        if (!string.IsNullOrEmpty(csvParser.Audio)) {
+            audioManager.PlayVoiceAudio(csvParser.Audio);
+        }
         if (string.IsNullOrEmpty(csvParser.InputChoice2)) {
             switch (choice) {
                 case 1:

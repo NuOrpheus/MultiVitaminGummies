@@ -1,24 +1,24 @@
-enter,speaker,dialogue,choice1,choice2,exit1,exit2
-start,Narrator,Welcome to the tutorial of this unfished project <br>This will be a demonstration of this project rather than a conventional story for now. <br>You can progress by either clicking with left mouse button// or your space bar.,,,testA1,
-choicesA1,Narrator,What's 1 + 1 equal to?,2,3,choicesA2,badEndA1
-choicesA2,Narrator,Good Job!! <br>You answered correctly// and have thus retained tutorial privilages.,,,choicesA3,
-testA1,Narrator,This is a incomplete visual novel frame made with unity// being the alpha release it is very rough around the edges and missing important functionality. ,,,testA2,
-end,end,The end: The end.,,,end,
-testA2,Narrator,The purpose of this project is:<br>A: To pass the college module that I built this for and// <br>B: Because I used a visual novel engine for a previous project that lacked a certain functionality that would've been very useful.,,,testA3,
-testA3,Narrator,First I will start off by explaining the basics of this project-,,,testA4,
-testA4,Narrator,You can display text- <br>-across multiple paragraphs// as well as create branching dialogue paths.,,,testA5,
-testA5,Narrator,The paths are chosent by selecting dialogue choices. In these sections you must select a choice to progress.,,,testA6,
-testA6,Narrator,Have a go in the next section. ,,,choicesA1,
-badEndA1,Narrator,Ok so you answered wrong. <br>This is where the tutorial ends.<br>,,,end,
-choicesA3,Narrator,Here's another question: What happens when you press your space bar// or click the screen// without selecting a choice.,Nothing happens,Wrong Answer,choicesA4,badEndB1
-badEndB1,Narrator,Wrong Answer: You are sent to the end.,,,end,
-choicesA4,Narrator,Okay so you understand the basics of this project now. <br>Now I'll go over how the some of the backend of this project works.,There's no choice-,-these lead to the same place.,choicesA5,choicesA5
-choicesA5,Narrator,All of the dialogue is stored in a ||csv||// or ||comma separated value|| file. This is a very simple file type that can be used to make spreadsheets.,,,choicesA6,
-choicesA6,Narrator,How they work is that they are composed of one long string where each column is seperated by a comma// and each row is separated by the characters ||\ n|| (without the space between them). ,,,choicesA7,
-choicesA7,Narrator,As you have probably noticed I am able to speak with those characters (except ||\ n||). <br> why I am able to do this is by writing into the csv file and then replacing certain character sequences with the characters I want once they have been put into a less tempermental holding place.,Continue?,Skip this part,choicesA8,choicesA7-1
-choicesA7-1,Narrator,No.,,,choicesA8,
-choicesA8,Narrator,A specific example of this is that in the csv I write commas as two ||/|| characters.,,,choicesA9,
-choicesA9,Narrator,Once these strings have been separated I put them into a variable that looks like this:<br>||choicesA10||: [||speaker||: ||Narrator||// ||dialogue||: ||This is a fairly inefficient way of storing things// but it's easier to read.||// ||choice1||: ||||// ||choice2||: ||||// ||exit1||: ||SCARYJUMPSCARE||// ||exit2||: ||||],,,choicesA10,
-choicesA10,Narrator,This is a fairly inefficient way of storing things but it's easier to read.,,,SCARYJUMPSCARE,
-SCARYJUMPSCARE,Narrator,Once the text is processed I can do <color=||red||><b>whatever</b> TextMeshPro allows me <color=||black||>to do with string inputs.,,,choicesA11,
-choicesA11,Narrator,That concludes the tutorial// thanks for playing through this alpha.,,,end,
+enter,speaker,dialogue,choice1,choice2,exit1,exit2,audio
+start,Narrator,Welcome to the tutorial of this unfished project <br>This will be a demonstration of this project rather than a conventional story for now. <br>You can progress by either clicking with left mouse button// or your space bar.,,,testA1,,
+choicesA1,Narrator,What's 1 + 1 equal to?,2,3,choicesA2,badEndA1,
+choicesA2,Narrator,Good Job!! <br>You answered correctly// and have thus retained tutorial privilages.,,,choicesA3,,
+testA1,Narrator,This is a incomplete visual novel frame made with unity// being the alpha release it is very rough around the edges and missing important functionality. ,,,testA2,,
+end,end,The end: The end.,,,end,,
+testA2,Narrator,The purpose of this project is:<br>A: To pass the college module that I built this for and// <br>B: Because I used a visual novel engine for a previous project that lacked a certain functionality that would've been very useful.,,,testA3,,
+testA3,Narrator,First I will start off by explaining the basics of this project-,,,testA4,,
+testA4,Narrator,You can display text- <br>-across multiple paragraphs// as well as create branching dialogue paths.,,,testA5,,
+testA5,Narrator,The paths are chosent by selecting dialogue choices. In these sections you must select a choice to progress.,,,testA6,,
+testA6,Narrator,Have a go in the next section. ,,,choicesA1,,
+badEndA1,Narrator,Ok so you answered wrong. <br>This is where the tutorial ends.<br>,,,end,,testAudio1
+choicesA3,Narrator,Here's another question: What happens when you press your space bar// or click the screen// without selecting a choice.,Nothing happens,Wrong Answer,choicesA4,badEndB1,
+badEndB1,Narrator,Wrong Answer: You are sent to the end.,,,end,,testAudio2
+choicesA4,Narrator,Okay so you understand the basics of this project now. <br>Now I'll go over how the some of the backend of this project works.,There's no choice-,-these lead to the same place.,choicesA5,choicesA5,
+choicesA5,Narrator,All of the dialogue is stored in a ||csv||// or ||comma separated value|| file. This is a very simple file type that can be used to make spreadsheets.,,,choicesA6,,
+choicesA6,Narrator,How they work is that they are composed of one long string where each column is seperated by a comma// and each row is separated by the characters ||\ n|| (without the space between them). ,,,choicesA7,,
+choicesA7,Narrator,As you have probably noticed I am able to speak with those characters (except ||\ n||). <br> why I am able to do this is by writing into the csv file and then replacing certain character sequences with the characters I want once they have been put into a less tempermental holding place.,Continue?,Skip this part,choicesA8,choicesA7-1,
+choicesA7-1,Narrator,No.,,,choicesA8,,
+choicesA8,Narrator,A specific example of this is that in the csv I write commas as two ||/|| characters.,,,choicesA9,,
+choicesA9,Narrator,Once these strings have been separated I put them into a variable that looks like this:<br>||choicesA10||: [||speaker||: ||Narrator||// ||dialogue||: ||This is a fairly inefficient way of storing things// but it's easier to read.||// ||choice1||: ||||// ||choice2||: ||||// ||exit1||: ||SCARYJUMPSCARE||// ||exit2||: ||||],,,choicesA10,,
+choicesA10,Narrator,This is a fairly inefficient way of storing things but it's easier to read.,,,SCARYJUMPSCARE,,
+SCARYJUMPSCARE,Narrator,Once the text is processed I can do <color=||red||><b>whatever</b> TextMeshPro allows me <color=||black||>to do with string inputs.,,,choicesA11,,
+choicesA11,Narrator,That concludes the tutorial// thanks for playing through this alpha.,,,end,,

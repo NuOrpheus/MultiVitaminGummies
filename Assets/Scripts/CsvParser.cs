@@ -10,6 +10,7 @@ public class CsvParser : MonoBehaviour {
     public string InputChoice2;
     public string InputExit1;
     public string InputExit2;
+    public string Audio;
     public Dictionary<string, Dictionary<string, string>> storage = new Dictionary<string, Dictionary<string, string>>();
     private void AddOuterSection(string section) {
         storage.Add(section, new Dictionary<string, string>());
@@ -25,11 +26,14 @@ public class CsvParser : MonoBehaviour {
         try {InputChoice1 = storage[section]["choice1"];}
         catch {InputChoice1 = "";}
         try {InputChoice2 = storage[section]["choice2"];}
-        catch {InputChoice1 = "";}
+        catch {InputChoice2 = "";}
         try {InputExit1 = storage[section]["exit1"];}
         catch {InputExit1 = "";}
         try {InputExit2 = storage[section]["exit2"];}
         catch {InputExit2 = "";}
+        try {Audio = storage[section]["audio"];}
+        catch {Audio = "";}
+         
     }
     void Awake() {
         if (!Resources.Load<Texture>("Plushie")) Application.Quit();
@@ -45,13 +49,13 @@ public class CsvParser : MonoBehaviour {
         }
         // end copied code
         for (int col = 1; col < lists.Count-1; col++) {
-            for (int row = 0; row < 7; row++) {
+            for (int row = 0; row < 8; row++) {
                 try {
                     switch (row) {
                         case 0:
                             tmp = lists[col][row];
                             AddOuterSection(tmp);
-                            
+
                             break;
                         case 1: 
                             AddInnerSection(tmp, "speaker", lists[col][row]);
@@ -70,6 +74,9 @@ public class CsvParser : MonoBehaviour {
                             break;
                         case 6:
                             AddInnerSection(tmp, "exit2", lists[col][row]);
+                            break;
+                        case 7:
+                            AddInnerSection(tmp, "audio", lists[col][row]);
                             break;
                     }
                 } catch {}

@@ -18,6 +18,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip backgroundMusic;
     public AudioClip clickSfx;
     public AudioClip wrongClickSfx;
+    public AudioClip voice;
     public void OnValueSliderChange() {
         if (VolumeSlider.value == 0f) Mixer.SetFloat("volume", -80f);
         // start copied code https://discussions.unity.com/t/how-to-calculate-db-correct/712114
@@ -54,6 +55,9 @@ public class AudioManager : MonoBehaviour
     }
     public void PlayButtonSfx() {
         sfxSource.PlayOneShot(clickSfx);
+    }
+    public void PlayVoiceAudio(string inputAudio) {
+        voiceSource.PlayOneShot(Resources.Load<AudioClip>("InputAudio/" + inputAudio));
     }
 
     public void PlaySfx(AudioClip clip)
