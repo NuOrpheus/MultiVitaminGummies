@@ -233,7 +233,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 264.77893, y: -39.73468}
+  m_AnchoredPosition: {x: 264.77893, y: -39.734695}
   m_SizeDelta: {x: 111.87, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &90730789
@@ -1158,7 +1158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 264.77893, y: -89.2041}
+  m_AnchoredPosition: {x: 264.77893, y: -89.20409}
   m_SizeDelta: {x: 111.87, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &554500199
@@ -1553,6 +1553,7 @@ GameObject:
   - component: {fileID: 677309844}
   - component: {fileID: 677309849}
   - component: {fileID: 677309848}
+  - component: {fileID: 677309850}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1682,6 +1683,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 677309843}
   m_CullTransparentMesh: 1
+--- !u!114 &677309850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677309843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc4278128078516409d8a3396e9d11b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  background: {fileID: 0}
 --- !u!1 &724052695
 GameObject:
   m_ObjectHideFlags: 0
@@ -3738,7 +3752,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1854941013}
   - component: {fileID: 1854941016}
-  - component: {fileID: 1854941014}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -3767,32 +3780,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1854941014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1854941012}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 4
-  m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 1
-  m_ChildControlHeight: 1
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
-  m_ReverseArrangement: 0
 --- !u!222 &1854941016
 CanvasRenderer:
   m_ObjectHideFlags: 0
