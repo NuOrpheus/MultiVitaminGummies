@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 59134a3dbf92fc631ba7b585bcdd40da
+guid: da9533ecc37c2b142aa76af84006c18d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3026058171327407114
-    second: restart_0
+      213: -8017188075101133220
+    second: Windows_Toggle_Inactive_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: restart_0
+      name: Windows_Toggle_Inactive_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 474
-        height: 474
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6fb9c5c30284106d0800000000000000
-      internalID: -3026058171327407114
+      spriteID: c56691e2ce93db090800000000000000
+      internalID: -8017188075101133220
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      restart_0: -3026058171327407114
+      Windows_Toggle_Inactive_0: -8017188075101133220
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -57,6 +57,8 @@ public class AudioManager : MonoBehaviour
         sfxSource.PlayOneShot(clickSfx);
     }
     public void PlayVoiceAudio(string inputAudio) {
+        Debug.Log("InputAudio/" + inputAudio);
+        Debug.Log(Resources.Load<AudioClip>("InputAudio/" + inputAudio));
         voiceSource.PlayOneShot(Resources.Load<AudioClip>("InputAudio/" + inputAudio));
     }
 
