@@ -11,6 +11,7 @@ public class CsvParser : MonoBehaviour {
     public string InputExit1;
     public string InputExit2;
     public string Audio;
+    public string Image;
     public Dictionary<string, Dictionary<string, string>> storage = new Dictionary<string, Dictionary<string, string>>();
     private void AddOuterSection(string section) {
         storage.Add(section, new Dictionary<string, string>());
@@ -33,6 +34,8 @@ public class CsvParser : MonoBehaviour {
         catch {InputExit2 = "";}
         try {Audio = storage[section]["audio"];}
         catch {Audio = "";}
+        try {Image = storage[section]["image"];}
+        catch {Image = "";}
          
     }
     void Awake() {
@@ -49,7 +52,7 @@ public class CsvParser : MonoBehaviour {
         }
         // end copied code
         for (int col = 1; col < lists.Count-1; col++) {
-            for (int row = 0; row < 8; row++) {
+            for (int row = 0; row < 9; row++) {
                 try {
                     switch (row) {
                         case 0:
@@ -77,6 +80,9 @@ public class CsvParser : MonoBehaviour {
                             break;
                         case 7:
                             AddInnerSection(tmp, "audio", lists[col][row]);
+                            break;
+                        case 8:
+                            AddInnerSection(tmp, "image", lists[col][row]);
                             break;
                     }
                 } catch {}

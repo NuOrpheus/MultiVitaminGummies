@@ -11,6 +11,7 @@ public class DialogueManager : MonoBehaviour {
     [SerializeField] private TMP_Text currentChoice2;
     [SerializeField] private TMP_Text currentDialogue;
     [SerializeField] private TMP_Text currentSpeaker;
+    [SerializeField] private backgroundChanger character;
     private float x = 0f;
     private Sprite choiceImage1;
     private bool wait = false;
@@ -47,6 +48,10 @@ public class DialogueManager : MonoBehaviour {
     }
     public void ChangeText(string section, int choice) {
         csvParser.nextSection(section);
+        //
+        character.changeSprite(csvParser.Image);
+        print(csvParser.Image);
+        //
         if (!string.IsNullOrEmpty(csvParser.Audio)) {
             audioManager.PlayVoiceAudio(csvParser.Audio);
         }
