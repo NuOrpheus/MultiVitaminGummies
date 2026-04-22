@@ -1,5 +1,6 @@
 using UnityEngine;
 public class PageScroll : MonoBehaviour {
+    [SerializeField] RectTransform Menu4;
     [SerializeField] RectTransform Menu3;
     [SerializeField] RectTransform Menu2;
     [SerializeField] RectTransform Menu1;
@@ -23,9 +24,10 @@ public class PageScroll : MonoBehaviour {
     }
     public void MovePage3()
     {
-        print(Camera1.position);
         Camera1.position = new Vector3(Menu3.position.x, Menu3.position.y, -10);
-        print(Menu3.position);
     }
-
+    public void MovePage4()
+    {
+        Camera1.position = new Vector3(Menu4.position.x, Menu4.position.y, -10);
+    }
 }
