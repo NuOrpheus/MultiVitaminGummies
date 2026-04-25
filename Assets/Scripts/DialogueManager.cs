@@ -13,6 +13,7 @@ public class DialogueManager : MonoBehaviour {
     [SerializeField] private TMP_Text currentSpeaker;
     [SerializeField] private ImageChanger character;
     [SerializeField] private ImageChanger background;
+    [SerializeField] private PageScroll pageScroll;
     private float x = 0f;
     private Sprite choiceImage1;
     private bool wait = false;
@@ -42,15 +43,16 @@ public class DialogueManager : MonoBehaviour {
     }
     private void Update() {
         x += Time.deltaTime;
-        if (Input.GetButton("Jump") && (x > 0.15)) {
+        if (pageScroll.pageIndex == 2 && Input.GetButton("Jump") && (x > 0.25f)) {
             if (!choicesPanel.activeSelf && !wait) OnClickChoice1();
-            x = 0;
+            x = 0f;
         }
     }
     public void ChangeText(string section, int choice) {
         csvParser.nextSection(section);
         //
         character.changeCharacter(csvParser.Image);
+        background.changeBackground(csvParser.Background);
 
         //
         if (!string.IsNullOrEmpty(csvParser.Audio)) {

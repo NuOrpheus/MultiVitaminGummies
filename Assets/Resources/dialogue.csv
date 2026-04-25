@@ -3,7 +3,7 @@ start,Narrator,Welcome to the tutorial of this unfished project <br>This will be
 choicesA1,Narrator,What's 1 + 1 equal to?,2,3,choicesA2,badEndA1,,V2,
 choicesA2,Narrator,Good Job!! <br>You answered correctly// and have thus retained tutorial privilages.,,,choicesA3,,,V1,
 testA1,Narrator,This is a incomplete visual novel frame made with unity// being the alpha release it is very rough around the edges and missing important functionality. ,,,testA2,,,V2,
-end,end,The end: The end. Click the top right button to restart.,,,end,,,V1,
+end,end,The end: The end. Click the top right button to restart.,,,end,,,V1,frutiger_aero
 testA2,Narrator,The purpose of this project is:<br>A: To pass the college module that I built this for and// <br>B: Because I used a visual novel engine for a previous project that lacked a certain functionality that would've been very useful.,,,testA3,,,V2,
 testA3,Narrator,First I will start off by explaining the basics of this project-,,,testA4,,,V1,
 testA4,Narrator,You can display text- <br>-across multiple paragraphs// as well as create branching dialogue paths.,,,testA5,,,V2,

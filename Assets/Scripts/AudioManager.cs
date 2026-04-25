@@ -16,9 +16,8 @@ public class AudioManager : MonoBehaviour
     public AudioSource voiceSource;
     [Header("Audio Clips")]
     public AudioClip menuMusic;
-    public AudioClip backgroundMusic;
+    //public AudioClip backgroundMusic;
     public AudioClip clickSfx;
-    public AudioClip wrongClickSfx;
     public AudioClip voice;
 
     public void OnValueSlider1Change() {
@@ -50,16 +49,8 @@ public class AudioManager : MonoBehaviour
     }
     private void Start()
     {   
-        if (backgroundMusic != null && musicSource != null){
-            try {
-                if (SceneManager.GetActiveScene().buildIndex == 0) {
-                    musicSource.clip = menuMusic;
-                } else {
-                    musicSource.clip = backgroundMusic;
-                }
-            } catch {
-                musicSource.clip = backgroundMusic;
-            }
+        if (menuMusic != null && musicSource != null){
+            musicSource.clip = menuMusic;
             musicSource.loop = true;
             musicSource.Play();
         }

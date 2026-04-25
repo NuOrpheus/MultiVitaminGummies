@@ -5,29 +5,27 @@ public class PageScroll : MonoBehaviour {
     [SerializeField] RectTransform Menu2;
     [SerializeField] RectTransform Menu1;
     [SerializeField] Transform Camera1;
+    public int pageIndex;
     private Vector3 pos;
-
-    private void Awake()
-    {
-        
-    }
-
-  
 
     public void MovePage1()
     {
         Camera1.position = new Vector3(Menu1.position.x, Menu1.position.y, -10);
+        pageIndex = 1;
     }
     public void MovePage2()
     {
         Camera1.position = new Vector3(Menu2.position.x, Menu2.position.y, -10);
+        pageIndex = 2;
     }
     public void MovePage3()
     {
         Camera1.position = new Vector3(Menu3.position.x, Menu3.position.y, -10);
+        pageIndex = 3;
     }
     public void MovePage4()
     {
         Camera1.position = new Vector3(Menu4.position.x, Menu4.position.y, -10);
+        pageIndex = 4;
     }
 }

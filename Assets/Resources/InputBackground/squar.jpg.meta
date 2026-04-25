@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4a07d857d97274346ac750fb77d3db3b
+guid: 83aac136cf6ce3b3e8fe2fc5ad2a1366
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5124538394015499482
-    second: frutiger-metro_0
+      213: 5388339602171925850
+    second: squar_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -97,7 +97,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -110,7 +110,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: frutiger-metro_0
+      name: squar_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1920
-        height: 1200
+        width: 700
+        height: 700
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ad40525b4840e1740800000000000000
-      internalID: 5124538394015499482
+      spriteID: a5590acc15a37ca40800000000000000
+      internalID: 5388339602171925850
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      frutiger-metro_0: 5124538394015499482
+      squar_0: 5388339602171925850
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
