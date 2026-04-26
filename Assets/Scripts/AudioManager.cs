@@ -7,11 +7,13 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance { get; private set; }
     [Header("Audio Volume")]
-    [SerializeField] private Slider VolumeSlider1;
-    [SerializeField] private Slider VolumeSlider2;
+    [SerializeField] private Slider SfxSlider1;
+    [SerializeField] private Slider MusicSlider1;
+    [SerializeField] private Slider SfxSlider2;
+    [SerializeField] private Slider MusicSlider2;
     //[SerializeField] private AudioMixer MasterMixer;
-    //[SerializeField] public AudioMixer MusicMixer;
-    [SerializeField] public AudioMixer MusicMixer;
+    [SerializeField] private AudioMixer SfxMixer;
+    [SerializeField] private AudioMixer MusicMixer;
     [Header("Audio Sources")]
     public AudioSource musicSource;
     public AudioSource sfxSource;
@@ -21,28 +23,39 @@ public class AudioManager : MonoBehaviour
     //public AudioClip backgroundMusic;
     public AudioClip clickSfx;
     public AudioClip voice;
+    public AudioClip sliderSfx;
 
-    public void OnValueSlider1Change() {
-        if (VolumeSlider1.value == 0f) MusicMixer.SetFloat("Volume", -80f);
+    public void OnValueSfxSlider1Change() {
+        if (SfxSlider1.value == 0f) SfxMixer.SetFloat("SfxVolume", -80f);
         // start copied code https://discussions.unity.com/t/how-to-calculate-db-correct/712114
-        else MusicMixer.SetFloat("Volume", 20 * Mathf.Log10(VolumeSlider1.value));
+        else SfxMixer.SetFloat("SfxVolume", 20 * Mathf.Log10(SfxSlider1.value));
         //end copied code
-        //VolumeSlider2.value = VolumeSlider1.value;
+        MusicSlider2.value = MusicSlider1.value;
     }
-    public void OnValueSlider2Change() {
-        if (VolumeSlider2.value == 0f) MusicMixer.SetFloat("volume", -80f);
+    public void OnValueSfxSlider2Change() {
+        if (SfxSlider2.value == 0f) SfxMixer.SetFloat("SfxVolume", -80f);
         // start copied code https://discussions.unity.com/t/how-to-calculate-db-correct/712114
-        else MusicMixer.SetFloat("volume", 20 * Mathf.Log10(VolumeSlider2.value));
+        else SfxMixer.SetFloat("SfxVolume", 20 * Mathf.Log10(SfxSlider2.value));
         //end copied code
-        //VolumeSlider1.value = VolumeSlider2.value;
+        MusicSlider1.value = MusicSlider2.value;
     }
-    public void OnMute() {
-        VolumeSlider1.value = 0f;
-        VolumeSlider2.value = 0f;
+    public void OnValueMusicSlider1Change() {
+        if (MusicSlider1.value == 0f) MusicMixer.SetFloat("MusicVolume", -80f);
+        // start copied code https://discussions.unity.com/t/how-to-calculate-db-correct/712114
+        else MusicMixer.SetFloat("MusicVolume", 20 * Mathf.Log10(MusicSlider1.value));
+        //end copied code
+        SfxSlider2.value = SfxSlider1.value;
     }
-    private void Start()
-    {  
-        MusicMixer.SetFloat("volume", 0.5f);
+    public void OnValueMusicSlider2Change() {
+        if (MusicSlider2.value == 0f) MusicMixer.SetFloat("MusicVolume", -80f);
+        // start copied code https://discussions.unity.com/t/how-to-calculate-db-correct/712114
+        else MusicMixer.SetFloat("MusicVolume", 20 * Mathf.Log10(MusicSlider2.value));
+        //end copied code
+        SfxSlider1.value = SfxSlider2.value;
+    }
+
+    private void Start() {
+        sfxSource.clip = sliderSfx;
         if (menuMusic != null && musicSource != null){
             musicSource.clip = menuMusic;
             musicSource.loop = true;
@@ -64,6 +77,9 @@ public class AudioManager : MonoBehaviour
         {
             sfxSource.PlayOneShot(clip);
         }
+    }
+    public void PlaySliderSfx() {
+        if (!sfxSource.isPlaying) sfxSource.Play();
     }
     public void PlayMusic(AudioClip clip)
     {
