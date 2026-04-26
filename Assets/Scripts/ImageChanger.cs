@@ -12,7 +12,7 @@ public class ImageChanger : MonoBehaviour
         if (inputBackground != "") spriteRenderer.sprite = Resources.Load<Sprite>("InputBackground/" + inputBackground);
     }
     public void changeCharacter(string inputSprite) {
+        if (inputSprite == "") inputSprite = "null";
         spriteRenderer.sprite = Resources.Load<Sprite>("InputCharacter/" + inputSprite);
-        
     }
 }
