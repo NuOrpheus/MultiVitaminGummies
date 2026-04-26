@@ -1,6 +1,6 @@
 enter,speaker,dialogue,choice1,choice2,exit1,exit2,audio,image,background
-start,Narrator,Welcome to this game!,,,testA1,,,char1,2frutiger-metro
-end,Narrator,The end: The end. Click the top right button to restart.,,,end,,,char1,
+start,Narrator,Welcome to this game!,,,testA1,,,char1,frutiger_metro3
+end,Narrator,The end: The end. You can click the top right button to restart.,,,end,,,,
 ,,,,,,,,char1,
 testA1,Narrator,This is a visual novel framework that I have made with unity. This is the beta release and contains all major functionality that I had previously planned.,,,testA2,,,char1,
 testA2,Narrator,The purpose of this project was:<br>A: To pass the college module that I built this for and// <br>B: A visual novel engine I used for a previous project lacked a certain functionality that I wanted.,,,testA3,,,char1,
@@ -36,8 +36,8 @@ badEndA16,Narrator,Ok// I guess we can skip the tutorial. I still have the endin
 audio1,Narrator,Sound warning: the audio can be reduced through the settings// by pressing the top left button and changing ||SFX||.,,,audio2,,,char1,
 audio2,Narrator,This is the text to speech engine ||Better SAM||.,,,audio3,,sam1,char1,
 audio3,Narrator,Metal pipe.,,,audio4,,metalPipe,char1,
-audio4,Narrator,And lastly: Triple Baka.,,,audio5,,tripleBaka,char1,
-audio5,Narrator,Now back to other features:,,,testA13,,null,char1,
+audio4,Narrator,And lastly: Triple Baka.,,,audio5,,tripleBaka,char1,tripleBaka
+audio5,Narrator,Now back to other features:,,,testA13,,null,char1,frutiger_metro3
 choicesA1,Narrator,What's 1 + 1?,2,3,choicesA2,badEndA1,,char1,
 choicesA2,Narrator,Well done! You retain tutorial privilages!,,,choicesA3,,,char1,
 choicesA3,Narrator,Here's your next question: What happens when you press your space bar// or click the screen// without selecting a choice.,Nothing happens,Wrong Answer,choicesA4,badEndA1,,char1,
@@ -54,4 +54,4 @@ tutorialA7,Narrator,Once these strings have been separated I put them into a var
 tutorialA8,,||choicesA10||: [||speaker||: ||Narrator||// ||dialogue||: ||This is a fairly inefficient way of storing things// but it's easier to read.||// ||choice1||: ||||// ||choice2||: ||||// ||exit1||: ||SCARYJUMPSCARE||// ||exit2||: ||||],,,tutorialA9,,,char1,
 tutorialA9,Narrator,This is a fairly inefficient way of storing things// but it's easier to read.,,,SCARYJUMPSCARE,,,char1,
 SCARYJUMPSCARE,Narrator,<color=||red||><b>=LARGE COLOURED TEXT</b>,,,tutorialA10,,,char1,
-tutorialA10,Narrator,That concludes the tutorial// thanks for playing through this game. The code is linked on this webpage if you wish to use this framework for your own purposes.,,,end,,,null,
+tutorialA10,Narrator,That concludes the tutorial// thanks for playing through this game. The code is linked on this webpage if you wish to use this framework for your own purposes.,,,end,,,char1,
