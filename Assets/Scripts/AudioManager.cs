@@ -68,6 +68,7 @@ public class AudioManager : MonoBehaviour
     public void PlayVoiceAudio(string inputAudio) {
         Debug.Log("InputAudio/" + inputAudio);
         Debug.Log(Resources.Load<AudioClip>("InputAudio/" + inputAudio));
+        voiceSource.Stop();
         voiceSource.PlayOneShot(Resources.Load<AudioClip>("InputAudio/" + inputAudio));
     }
 
